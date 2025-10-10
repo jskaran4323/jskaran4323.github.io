@@ -1,0 +1,206 @@
+
+/* CSS Variables for Theme */
+:root {
+    --bg-primary: linear-gradient(135deg, #f5f7fa 0%, #e8eef3 100%);
+    --bg-card: white;
+    --text-primary: #000000;
+    --text-secondary: #6c757d;
+    --border-color: #dee2e6;
+    --shadow: rgba(0, 0, 0, 0.08);
+    --navbar-bg: white;
+    --badge-bg: white;
+    --badge-text: #000000;
+}
+
+[data-theme="dark"] {
+    --bg-primary: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    --bg-card: #0f3460;
+    --text-primary: #ffffff;
+    --text-secondary: #b8c5d6;
+    --border-color: #1a3a52;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --navbar-bg: #0f3460;
+    --badge-bg: #1a3a52;
+    --badge-text: #ffffff;
+}
+
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Navigation */
+.navbar {
+    background: var(--navbar-bg) !important;
+    box-shadow: 0 2px 10px var(--shadow);
+    transition: background 0.3s ease;
+}
+
+.navbar-brand,
+.nav-link {
+    color: var(--text-primary) !important;
+}
+
+/* Dark Mode Toggle */
+.theme-toggle {
+    background: none;
+    border: 2px solid var(--text-primary);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.theme-toggle:hover {
+    background: var(--text-primary);
+    color: var(--bg-card);
+    transform: scale(1.05);
+}
+
+/* Profile Section */
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border: 5px solid #3498db;
+    box-shadow: 0 5px 20px rgba(52, 152, 219, 0.3);
+}
+
+.contact-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    filter: var(--icon-filter, none);
+}
+
+[data-theme="dark"] .contact-icon {
+    filter: invert(1);
+}
+
+/* Section Cards */
+.section-card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px var(--shadow);
+    transition: background 0.3s ease;
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 0;
+    color: var(--text-primary);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #3498db;
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+/* Company & University Logos */
+.company-logo,
+.university-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    background: white;
+    padding: 0.3rem;
+    border-radius: 8px;
+}
+
+/* Certification Badges */
+.cert-badge {
+    background: linear-gradient(135deg, #00684A 0%, #00A86B 100%);
+    color: white;
+}
+
+.cert-badge-icon {
+    font-size: 3rem;
+}
+
+/* Skill Icons */
+.skill-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Content Areas */
+/* Content Areas */
+.bg-light {
+background-color: var(--badge-bg) !important;
+transition: background-color 0.3s ease;
+}
+
+.border-primary {
+border-color: #3498db !important;  /* ← Added this to force blue color */
+}
+
+.text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+.text-dark {
+    color: var(--text-primary) !important;
+}
+
+.text-muted {
+    color: var(--text-secondary) !important;
+}
+
+.badge.bg-white {
+    background-color: var(--badge-bg) !important;
+    color: var(--badge-text) !important;
+    border: 1px solid var(--border-color);
+}
+
+/* Links */
+a.text-dark {
+    color: var(--text-primary) !important;
+}
+
+a.text-dark:hover {
+    color: #3498db !important;
+}
+
+/* Cards */
+.card {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+    transition: background-color 0.3s ease;
+}
+
+.card-body {
+    color: var(--text-primary);
+}
+
+/* Buttons */
+.btn-outline-primary:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Footer adjustments */
+footer a:hover {
+    color: #3498db !important;
+}
+
+/* Navbar toggler icon for dark mode */
+[data-theme="dark"] .navbar-toggler-icon {
+    filter: invert(1);
+}
