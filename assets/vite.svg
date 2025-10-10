@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150" role="img" aria-label="DevFlow Logo">
+    <defs>
+      <linearGradient id="devflowGradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#00C6A7"/>
+        <stop offset="100%" stop-color="#0072FF"/>
+      </linearGradient>
+    </defs>
+  
+    <!-- Top diamond -->
+    <path d="M75 15 L105 45 L75 75 L45 45 Z" fill="url(#devflowGradient)" />
+    
+    <!-- Bottom arrow -->
+    <path d="M45 60 L75 90 L105 60 L115 70 L75 110 L35 70 Z" fill="url(#devflowGradient)" />
+  </svg>
+  
